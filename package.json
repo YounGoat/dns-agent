@@ -1,0 +1,35 @@
+{
+    "bin": {},
+    "dependencies": {
+        "jinang": "^0.1.0"
+    },
+    "devDependencies": {
+        "mocha": "^3.3.0"
+    },
+    "directories": {},
+    "scripts": {
+        "test": "mocha"
+    },
+    "name": "dns-agent",
+    "version": "0.0.1",
+    "main": "DnsAgent.js",
+    "keywords": [
+        "dns",
+        "dns-cache",
+        "dns-ttl"
+    ],
+    "engines": {
+        "node": ">=6"
+    },
+    "homepage": "https://github.com/YounGoat/dns-agent",
+    "description": "DNS agent",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YounGoat/dns-agent.git"
+    },
+    "author": {
+        "name": "YounGoat",
+        "email": "youngoat@163.com",
+        "url": "https://youngoat.github.io"
+    }
+}

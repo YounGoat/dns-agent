@@ -1,0 +1,4 @@
+{
+    "name": "dns-agent",
+    "alias": [ "dnsagent", "dns.agent" ]
+}
