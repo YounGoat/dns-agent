@@ -51,7 +51,7 @@ The main entrance of __dns-agent__ is a class (named `DnsAgent` in following cod
     const agent = new DnsAgent({ ttl, source });
     ```
 
-    -   __ttl__ *number* DEFAULT `86400`  
+    -   __ttl__ *number* DEFAULT `86400` (unit: seconds)  
         Time-To-Live of resolved address.
 
     -   __source__ *string* DEFAULT `"system"`  

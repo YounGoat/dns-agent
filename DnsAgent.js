@@ -72,7 +72,7 @@ DnsAgent.prototype.lookup4 = function(hostname, callback) {
                     dns.setServers([ this.options.source ]);
                     dns.resolve4(hostname, { ttl: this.options.ttl }, (err, addresses) => {
                         // Reset the DNS servers.
-                        setImmediate(() => {
+                        setTimeout(() => {
                             dns.setServers(servers);
                             err ? callback2(err) : callback2(err, addresses[0].address, addresses[0].ttl);
                         });
