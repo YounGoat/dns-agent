@@ -66,6 +66,9 @@ The main entrance of __dns-agent__ is a class (named `DnsAgent` in following cod
 *   Promise | void __agent.lookup4__(string *hostname* [, Function __callback__ ])  
     Resolve the *hostname* into the first found A(IPV4) address. This is a [PoC](https://www.npmjs.com/package/jinang#poc) function that will return an instance of `Promise` if no `callback` passed, or return void and invoke the passed `callback`. 
 
+    -   __hostname__ *string*
+    -   __callback__(Error *error*, String *ipv4*) *Function* OPTIONAL
+
 ##  Examples
 
 ##  Why *dns-agent*
