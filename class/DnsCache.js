@@ -19,7 +19,7 @@ const DnsCacheOptions = {
     caseSensitive: false,
     explicit: true,
     columns: [
-        'ttl DEFAULT(86400)'
+        'ttl DEFAULT(60)', /* in seconds, default 1 minite */
     ]
 };
 function DnsCache(options) {
