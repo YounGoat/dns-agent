@@ -49,7 +49,7 @@ describe('DnsAgent', () => {
 
     it('ttl', (done) => {
         let t1 = Date.now(), times = 0;
-        let agent = new DnsAgent({ ttl: 1000, source: '8.8.8.8' });
+        let agent = new DnsAgent({ ttl: 10, source: '8.8.8.8' });
         let run = () => {
             agent.lookup4('youngoat.github.io', (err, ipv4) => {
                 if (times++ < 100) {
