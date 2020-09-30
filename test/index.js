@@ -47,6 +47,29 @@ describe('DnsAgent', () => {
         });
     });
 
+    it('performance', done => {
+        let agent = new DnsAgent({ ttl: 0 });
+        let counter = 0;
+        let run = () => {
+            agent.lookup4('youngoat.github.io', (err, ipv4) => {
+                if (err) {
+                    throw err;
+                }
+                else {
+                    console.log(ipv4);
+                }
+
+                if (counter++ < 1000) {
+                    run();
+                }
+                else {
+                    done();
+                }
+            });
+        };
+        run();
+    });
+
     it('ttl', (done) => {
         let t1 = Date.now(), times = 0;
         let agent = new DnsAgent({ ttl: 10, source: '8.8.8.8' });
